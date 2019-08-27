@@ -13,4 +13,4 @@
 
 % % By Xianze Meng; Yunpeng Fu; Junsheng Yuan;
 
-% % hah! have fun!
+% % Hah! Following GPL. Have fun!
