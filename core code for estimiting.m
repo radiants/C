@@ -1,7 +1,7 @@
     xsa=0.0570;% XSA(i); the spread parameter 
     
     Ptrain=systemnakcl; % input solubility
-    EstData=xlsread('estdatanakcl.xls'); % not in training set
+    EstData=[35 35 35 35 35; 25.00 15.00 10.00 5.00 0.00; 2.90 15.53 18.99 23.34 27.66]; % not listed in training set
     
     xi=Ptrain(:,1); % read training set (3 colums)
     yi=Ptrain(:,2);
@@ -9,15 +9,15 @@
     
     LenTraini=length(xi);
     
-    ai=EstData(:,1); % read test set (3 colums)
-    bi=EstData(:,2);
-    ci=EstData(:,3);
+    ai=EstData(1,:); % read test set (3 line)
+    bi=EstData(2,:);
+    ci=EstData(3,:);
 
     LenTesti=length(ai);
     
-    ui=[xi;ai]; % combine for normalize
-    vi=[yi;bi];
-    wi=[zi;ci];
+    ui=[xi;ai']; % combine for normalize
+    vi=[yi;bi'];
+    wi=[zi;ci'];
     
     [Ui,PSUi]=mapminmax(ui',0,1);  % normalize
     [Vi,PSVi]=mapminmax(vi',0,1);
@@ -34,9 +34,4 @@
     NewNetCi=newgrnn([Xi; Yi],Zi,xsa); % construct grnn net
     TCi=sim(NewNetCi,[Ai;Bi]);  
     tci{i}= mapminmax('reverse',TCi,PSWi); % anti-normalized
-    tciT{i}=tci{i}';    % est. result of colume III;
-    
-    NewNetBi=newgrnn([Xi; Zi],Yi,xsa); % construct grnn net
-    TBi=sim(NewNetBi,[Ai;Ci]);  
-    tbi{i}= mapminmax('reverse',TBi,PSVi); % anti-normalized
-    tbiT{i}=tbi{i}';   % est. result of colume II;
+    tciT{i}=tci{i}';    % est. result of colume III (kcl);
