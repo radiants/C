@@ -9,7 +9,7 @@
     
     LenTraini=length(xi);
     
-    ai=EstData(1,:); % read test set (3 line)
+    ai=EstData(1,:); % read test set (3 lines)
     bi=EstData(2,:);
     ci=EstData(3,:);
 
@@ -33,5 +33,5 @@
     
     NewNetCi=newgrnn([Xi; Yi],Zi,xsa); % construct grnn net
     TCi=sim(NewNetCi,[Ai;Bi]);  
-    tci{i}= mapminmax('reverse',TCi,PSWi); % anti-normalized
-    tciT{i}=tci{i}';    % est. result of colume III (kcl);
+    tci = mapminmax('reverse',TCi,PSWi); % anti-normalized（estimated result of line III (kcl))
+   
