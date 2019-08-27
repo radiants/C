@@ -12,4 +12,5 @@
 % % (Fig. 5 “True” are values computed by Griewank benchmark function, “SA-GRNN” are values estimated by SA-GRNN model, “GRNN” are values estimated by GRNN.)
 
 % % By Xianze Meng; Yunpeng Fu; Junsheng Yuan;
-% % Love U
+
+% % hah! have fun!
