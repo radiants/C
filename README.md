@@ -8,7 +8,8 @@
 % % GrawGriewank.m: the function for drawing Griewank function
 % % Griewank.m: the innerfunction
 
-% % StandardTestbySA_GRNN: the Prediction results for training set samples. 
+% % StandardTestbySA_GRNN: the Prediction results for training set samples
+% % SA-GRNN modeling and optimization process are inbolved in
 % % (Fig. 5 “True” are values computed by Griewank benchmark function, “SA-GRNN” are values estimated by SA-GRNN model, “GRNN” are values estimated by GRNN.)
 
 % % By Xianze Meng; Yunpeng Fu; Junsheng Yuan;
