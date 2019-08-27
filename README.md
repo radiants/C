@@ -1,10 +1,12 @@
 % % a example for estimating NaCl-KCl-H2O system at 35 ℃
 
+% % This code will be available for a short period of time. Following GPL. 
+
 % % results are stable & speed is fast (cost few seconds)
 
 % % systemnakcl.mat: the solubility database for traing (the solubility at 35 ℃ are not involved in)
 
-% % core_code_for_estimiting.m: for GRNN modeling and estimating
+% % core_code_for_estimiting.m: for GRNN modeling and estimating. Have fun with this.
 
 % % GrawGriewank.m: the function for drawing Griewank function
 
