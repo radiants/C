@@ -1,4 +1,4 @@
-    xsa=0.0570;% XSA(i); the spread parameter 
+    sprd=0.0570;% XSA(i); the spread parameter 
     
     Ptrain=systemnakcl; % input solubility
     EstData=[35 35 35 35 35; 25.00 15.00 10.00 5.00 0.00; 2.90 15.53 18.99 23.34 27.66]; % not listed in training set
@@ -23,15 +23,15 @@
     [Vi,PSVi]=mapminmax(vi',0,1);
     [Wi,PSWi]=mapminmax(wi',0,1);
     
-    Xi=Ui(1:LenTraini);
+    Xi=Ui(1:LenTraini); % split
     Yi=Vi(1:LenTraini);
     Zi=Wi(1:LenTraini);
     
-    Ai=Ui(LenTraini+1:LenTraini+LenTesti);  % 
+    Ai=Ui(LenTraini+1:LenTraini+LenTesti);  % split
     Bi=Vi(LenTraini+1:LenTraini+LenTesti);
     Ci=Wi(LenTraini+1:LenTraini+LenTesti);
     
-    NewNetCi=newgrnn([Xi; Yi],Zi,xsa); % construct grnn net
+    NewNetCi=newgrnn([Xi; Yi],Zi,sprd); % construct grnn net
     TCi=sim(NewNetCi,[Ai;Bi]);  
     tci = mapminmax('reverse',TCi,PSWi); % anti-normalized（estimated result of line III (kcl))
    
