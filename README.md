@@ -10,4 +10,4 @@
 % % StandardTestbySA_GRNN is the Prediction results for training set samples. 
 % % (“True” are values computed by Griewank benchmark function, “SA-GRNN” are values estimated by SA-GRNN model, “GRNN” are values estimated by GRNN.)
 
-% % Xianze Meng; Yunpeng Fu; Junsheng Yuan;
+% % By Xianze Meng; Yunpeng Fu; Junsheng Yuan;
