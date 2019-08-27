@@ -1,4 +1,4 @@
-% % this is just a simple example for  estimating NaCl-KCl-H2O system at 35 ℃
+% % this is a example for  estimating NaCl-KCl-H2O system at 35 ℃
 
 % % systemnakcl.mat is the solubility database for traing and the solubility at 35 ℃ are not involved in.
 
