@@ -1,5 +1,5 @@
     sprd=0.0570;% XSA(i); the spread parameter 
-    
+    load systemnakcl;
     Ptrain=systemnakcl; % input solubility
     EstData=[35 35 35 35 35; 25.00 15.00 10.00 5.00 0.00; 2.90 15.53 18.99 23.34 27.66]; % not listed in training set
     
