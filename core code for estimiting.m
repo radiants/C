@@ -1,7 +1,7 @@
     xsa=0.0570;% XSA(i); the spread parameter 
     
     Ptrain=systemnakcl; % input solubility
-    EstData=xlsread('estdata.xls',i); % not in training set
+    EstData=xlsread('estdatanakcl.xls'); % not in training set
     
     xi=Ptrain(:,1); % read training set (3 colums)
     yi=Ptrain(:,2);
