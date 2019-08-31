@@ -2,7 +2,7 @@
     sprd=0.0570;% XSA(i); the spread parameter 
     load systemnakcl;
     Ptrain=systemnakcl; % input solubility
-    EstData=[35 35 35 35 35; 25.00 15.00 10.00 5.00 0.00; 2.90 15.53 18.99 23.34 27.66]; % not listed in training set
+    EstData=[35 35 35 35 35; 25.00 15.00 10.00 5.00 0.00; 2.00 10.00 15.00 20.00 25.00]; % not listed in training set
     % 1st line: temperatire; 2nd line: NaCl mass fraction; 3rd line: ture KCl mass fraction. 
     % 3rd line Not involved in modeling. It can be used to compare with the Est. results.
     
@@ -36,5 +36,5 @@
     
     NewNetCi=newgrnn([Xi; Yi],Zi,sprd); % construct grnn net
     TCi=sim(NewNetCi,[Ai;Bi]);  
-    tci = mapminmax('reverse',TCi,PSWi); % anti-normalized£¨estimated result of line III (kcl))
+    tci = mapminmax('reverse',TCi,PSWi); % anti-normalizedÂ£Â¨estimated result of line III (kcl))
     toc
